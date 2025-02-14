@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Meta Tag Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div id="header">
+        <img src="msi_logo.png" alt="Motorola Solutions Logo" id="msi-logo" />
+    </div>
+    <div id="form-container">
+        <h1>
+            Ceros Meta Tag Generator
+            <span class="info-symbol"
+                title="Match the keys exactly as defined in Eloqua's hidden form fields (case-sensitive). Enter the corresponding values you want to populate in those fields.">i</span>
+        </h1>
+        <form id="meta-form">
+            <div id="tag-rows">
+                <div class="tag-row">
+                    <input type="text" name="key[]" placeholder="Provide Key" />
+                    <input type="text" name="value[]" placeholder="Provide Value" />
+                    <button class="remove-tag">Remove</button>
+                </div>
+            </div>
+            <button id="add-tag">Add</button>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <div id="results-container" style="display: none">
+        <h2>Generated Meta Tags</h2>
+        <div id="meta-tags"></div>
+        <button id="copy-button">Copy to Clipboard</button>
+        <button id="start-over">Start Over</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
