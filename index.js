@@ -53,11 +53,11 @@ $(document).ready(function () {
         const PREFIX = 'ceros_';
         let metaTags = '';
         $('.tag-row').each(function () {
-            let key = $(this).find('input[name="key[]"]').val();
-            let value = $(this).find('input[name="value[]"]').val();
+            let key = $(this).find('input[name="key[]"]').val().trim();
+            let value = $(this).find('input[name="value[]"]').val().trim();
 
             if (key && value) {
-                metaTags += `<meta name="${PREFIX}${key}" content="${value}" />\n`;
+                metaTags += `<meta name="${PREFIX + key}" content="${value}" />\n`;
             }
         });
 
